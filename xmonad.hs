@@ -8,6 +8,7 @@
 --
 
 import XMonad
+import XMonad.Hooks.DynamicLog
 import Data.Monoid
 import System.Exit
 
@@ -58,7 +59,7 @@ myNumlockMask   = mod2Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["web","comm","code","debub","5","6","7","8","9"]
+myWorkspaces    = ["web","comm","code","debug","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -258,7 +259,7 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = xmonad =<< xmobar defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
