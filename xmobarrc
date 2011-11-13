@@ -4,7 +4,7 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Uptime         ["-t","Up: <days> days <hours>:<minutes>:<seconds>"] 10
                     , Run Weather "KCIC" ["-l","16","-H","22","--low","#00BFFF","--high","red","-t","Weather: <tempC>°C RH: <rh>% (<hour>)"] 36000
                     , Run Network "eth0" [] 10
-                    , Run MPD            ["-t","<state>: <artist> - <track>"] 10
+                    , Run MPD            ["-t","<state>: <artist> - <title>"] 10
                     , Run Date           "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run StdinReader
                     ]
