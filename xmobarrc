@@ -1,4 +1,5 @@
 Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+       , position = Static { xpos = 0, ypos = 0, width = 1806, height = 16 }
        , commands = [ Run MultiCpu       ["-l","50","-H","50","--low","green","--high","red","-t","CPU: <total0>% <total1>% <total2>% <total3>%"] 10
                     , Run Memory         ["-L","0","-H","75","--normal","green","--high","red","-t","MEM: <usedratio>%"] 10
                     , Run Uptime         ["-t","Up: <days> days <hours>:<minutes>:<seconds>"] 10
