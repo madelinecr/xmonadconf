@@ -222,6 +222,7 @@ myManageHook = composeAll
     [ className =? "MPlayer"         --> doFloat
     , className =? "Xfce4-appfinder" --> doFloat
     , className =? "Gimp"            --> doFloat
+    , className =? "Skype"           --> doFloat
     , className =? "stalonetray"     --> doIgnore
     , resource  =? "desktop_window"  --> doIgnore
     , resource  =? "kdesktop"        --> doIgnore ]
