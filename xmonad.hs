@@ -75,7 +75,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+    , ((modm,               xK_p     ), spawn "xfce4-appfinder")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -220,11 +220,12 @@ myLayout = tiled ||| Mirror tiled ||| Full
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , className =? "stalonetray"    --> doIgnore
-    , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    [ className =? "MPlayer"         --> doFloat
+    , className =? "Xfce4-appfinder" --> doFloat
+    , className =? "Gimp"            --> doFloat
+    , className =? "stalonetray"     --> doIgnore
+    , resource  =? "desktop_window"  --> doIgnore
+    , resource  =? "kdesktop"        --> doIgnore ]
 
 ------------------------------------------------------------------------
 -- Event handling
